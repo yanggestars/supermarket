@@ -11,31 +11,9 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.Scanner;
 
-/**
- * mp生成器
- * @Author: admin-
- * @Date: 2019/11/18 14:22
- */
+
 public class CodeGenerator {
 
-    /**
-     * <p>
-     * 读取控制台内容
-     * </p>
-     */
-    public static String scanner(String tip) {
-        Scanner scanner = new Scanner(System.in);
-        StringBuilder help = new StringBuilder();
-        help.append("请输入" + tip + "：");
-        System.out.println(help.toString());
-        if (scanner.hasNext()) {
-            String ipt = scanner.next();
-            if (StringUtils.isNotEmpty(ipt)) {
-                return ipt;
-            }
-        }
-        throw new MybatisPlusException("请输入正确的" + tip + "！");
-    }
 
     public static void main(String[] args) {
         // 代码生成器
@@ -45,24 +23,24 @@ public class CodeGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("luoyi-");
+        gc.setAuthor("pty");
         gc.setOpen(false);  //当代码生成完成之后是否打开代码所在的文件夹
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/cs?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://localhost:3306/smbms?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("123456");
+        dsc.setPassword("admin123");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.yeqifu");
+        pc.setModuleName(null);
+        pc.setParent("com.sup");
         pc.setXml("mapper.xml");
         mpg.setPackageInfo(pc);
 
@@ -88,11 +66,11 @@ public class CodeGenerator {
 //        strategy.setSuperEntityColumns("id");
 
         //设置要生成哪些表  如果不设置就是生成所有的表
-        strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
+        //strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setControllerMappingHyphenStyle(true);
 
         strategy.setTablePrefix(pc.getModuleName() + "_");
-//        strategy.setTablePrefix("sys_");
+        strategy.setTablePrefix("smbms_");
         mpg.setStrategy(strategy);
         mpg.execute();
     }

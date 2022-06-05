@@ -3,9 +3,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/cs?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC&useSSL=true
+      url: jdbc:mysql://127.0.0.1:3306/smbms?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC&useSSL=true
       username: root
-      password: 123456
+      password: admin123
       max-active: 20
       max-wait: 5000
       initial-size: 1

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/warehouse.iml" filepath="$PROJECT_DIR$/warehouse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supermarcket.iml" filepath="$PROJECT_DIR$/supermarcket.iml" />
     </modules>
   </component>
 </project>
