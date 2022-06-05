@@ -101,5 +101,10 @@ public class User implements Serializable {
     @TableField("modifyDate")
     private LocalDateTime modifyDate;
 
+    /**
+     * 头像照片地址
+     */
+    @TableField("imgpath")
+    private String imgpath;
 
 }

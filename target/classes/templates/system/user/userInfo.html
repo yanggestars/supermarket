@@ -27,13 +27,13 @@
             <label class="layui-form-label">用户名</label>
             <div class="layui-input-block">
                 <input type="hidden" class="id" name="id">
-                <input type="text" value="" id="name" th:value="${session.user.name}" disabled class="layui-input layui-disabled">
+                <input type="text" value="" id="name" th:value="${session.user.userName}" disabled class="layui-input layui-disabled">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">登陆名</label>
             <div class="layui-input-block">
-                <input type="text" value="" id="loginname" th:value="${session.user.loginname}" disabled class="layui-input layui-disabled">
+                <input type="text" value="" id="loginname" th:value="${session.user.userName}" disabled class="layui-input layui-disabled">
             </div>
         </div>
         <div class="layui-form-item">

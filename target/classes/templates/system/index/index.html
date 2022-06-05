@@ -31,7 +31,7 @@
 						<a href="javascript:;"><i class="seraph icon-lock"></i><cite>锁屏</cite></a>
 					</li>
 					<li class="layui-nav-item" id="userInfo">
-						<a href="javascript:;"><img src="/resources/images/face.jpg" th:src="${''+session.user.getImgpath()}" class="layui-nav-img userAvatar" width="35" height="35"><cite class="adminName" th:text="${session.user.name}"></cite></a>
+						<a href="javascript:;"><img src="/resources/images/face.jpg" th:src="${''+session.user.getImgpath()}" class="layui-nav-img userAvatar" width="35" height="35"><cite class="adminName" th:text="${session.user.userName}"></cite></a>
 						<dl class="layui-nav-child">
 							<dd><a href="javascript:;" data-url="/sys/toUserInfo"><i class="seraph icon-ziliao" data-icon="icon-ziliao"></i><cite>个人资料</cite></a></dd>
 							<dd><a href="javascript:;" data-url="/sys/toChangePassword"><i class="seraph icon-xiugai" data-icon="icon-xiugai"></i><cite>修改密码</cite></a></dd>
@@ -45,7 +45,7 @@
 		<div class="layui-side layui-bg-black">
 			<div class="user-photo">
 				<a class="img" title="我的头像" ><img src="/resources/images/face.jpg" th:src="${''+session.user.getImgpath()}" class="userAvatar"></a>
-				<p>你好！<span class="userName" th:text="${session.user.name}"></span>, 欢迎登录</p>
+				<p>你好！<span class="userName" th:text="${session.user.userName}"></span>, 欢迎登录</p>
 			</div>
 			<!-- 搜索 -->
 
@@ -107,7 +107,10 @@
 	    	layer = parent.layer === undefined ? layui.layer : top.layer;
 			tab = layui.bodyTab({
 				openTabNum : "50",  //最大可打开窗口数量
-				url : "/menu/loadIndexLeftMenuJson" //获取菜单json地址
+				//url : "/menu/loadIndexLeftMenuJson",
+				//url : "/resources/json/loadIndexLeftMenuJson.json" //获取菜单json地址
+				url : "http://localhost:8080/resources/json/loadIndexLeftMenuJson.json"
+				// url : "loadIndexLeftMenuJson.json"
 			});
 
 		//通过顶部菜单获取左侧二三级菜单   注：此处只做演示之用，实际开发中通过接口传参的方式获取导航数据

@@ -2,10 +2,13 @@ package com.sup.controller;
 
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.LineCaptcha;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sup.common.ActiverUser;
 import com.sup.common.ResultObj;
 import com.sup.common.WebUtils;
 import com.sup.entity.User;
+
+import com.sup.service.IUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -20,6 +23,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * 登陆前端控制器
@@ -30,27 +35,48 @@ import java.util.Date;
 @RequestMapping("login")
 public class LoginController {
 
+    @Autowired
+    private IUserService userService;
     @RequestMapping("login")
     public ResultObj login(User user, String code, HttpSession session){
 
         //获得存储在session中的验证码
         String sessionCode = (String) session.getAttribute("code");
+//        if (code!=null&&sessionCode.equals(code)){
+//            Subject subject = SecurityUtils.getSubject();
+//            AuthenticationToken token = new UsernamePasswordToken(user.getUserName(),user.getUserPassword());
+//            try {
+//                //对用户进行认证登陆
+//                subject.login(token);
+//                //通过subject获取以认证活动的user
+//                ActiverUser activerUser = (ActiverUser) subject.getPrincipal();
+//                //将user存储到session中
+//                WebUtils.getSession().setAttribute("user",activerUser.getUser());
+//
+//                return ResultObj.LOGIN_SUCCESS;
+//            } catch (AuthenticationException e) {
+//                e.printStackTrace();
+//                return ResultObj.LOGIN_ERROR_PASS;
+//            }
+//        }else {
+//            return ResultObj.LOGIN_ERROR_CODE;
+//        }
         if (code!=null&&sessionCode.equals(code)){
-            Subject subject = SecurityUtils.getSubject();
-            AuthenticationToken token = new UsernamePasswordToken(user.getUserName(),user.getUserPassword());
-            try {
-                //对用户进行认证登陆
-                subject.login(token);
-                //通过subject获取以认证活动的user
-                ActiverUser activerUser = (ActiverUser) subject.getPrincipal();
-                //将user存储到session中
-                WebUtils.getSession().setAttribute("user",activerUser.getUser());
 
+            HashMap<String, Object> map = new HashMap<>();
+            QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+            queryWrapper.eq("userCode", user.getUserName());
+            queryWrapper.eq("userPassword", user.getUserPassword());
+            List<User> users =  userService.list(queryWrapper);
+            users.forEach(u-> System.out.println(u.toString()));
+            if (users != null){
+                //将user存储到session中
+                WebUtils.getSession().setAttribute("user",user);
                 return ResultObj.LOGIN_SUCCESS;
-            } catch (AuthenticationException e) {
-                e.printStackTrace();
+            }else {
                 return ResultObj.LOGIN_ERROR_PASS;
             }
+
         }else {
             return ResultObj.LOGIN_ERROR_CODE;
         }
