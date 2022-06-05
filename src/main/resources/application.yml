@@ -35,7 +35,7 @@ spring:
 
 #配置mybatisplus
 mybatis-plus:
-  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  mapper-locations: classpath*:mapper/*Mapper.xml
   global-config:
     db-config:
       id-type: auto
@@ -57,8 +57,8 @@ shiro:
   authc-ulrs:
   - /**
 
-#修改端口号为8088
+#修改端口号为8080
 server:
-  port: 8081
+  port: 8080
 
 

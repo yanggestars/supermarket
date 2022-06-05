@@ -12,11 +12,11 @@ import javax.servlet.MultipartConfigElement;
 
 @Configuration
 @SpringBootApplication
-@MapperScan(basePackages = {"com.sup.*.mapper"})
-public class WarehouseApplication {
+@MapperScan(basePackages = {"com.sup.mapper"})
+public class SupApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WarehouseApplication.class, args);
+		SpringApplication.run(SupApplication.class, args);
 	}
 
 	@Bean
