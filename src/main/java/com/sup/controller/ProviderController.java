@@ -48,6 +48,7 @@ public class ProviderController {
         QueryWrapper<Provider> queryWrapper = new QueryWrapper();
         queryWrapper.like(StringUtils.isNotBlank(providerVo.getProName()),"proName",providerVo.getProName());
         queryWrapper.like(StringUtils.isNotBlank(providerVo.getProPhone()),"proPhone",providerVo.getProPhone());
+        queryWrapper.like(StringUtils.isNotBlank(providerVo.getProContact()),"proContact",providerVo.getProContact());
         providerService.page(page,queryWrapper);
         return new DataGridView(page.getTotal(),page.getRecords());
     }
@@ -120,17 +121,6 @@ public class ProviderController {
         }
     }
 
-    /**
-     * 加载所有可用的供应商
-     * @return
-     */
-    @RequestMapping("loadAllProviderForSelect")
-    public DataGridView loadAllProviderForSelect(){
-        QueryWrapper<Provider> queryWrapper = new QueryWrapper();
-        queryWrapper.eq("available", Constast.AVAILABLE_TRUE);
-        List<Provider> list = providerService.list(queryWrapper);
-        return new DataGridView(list);
-    }
 
 
 }

@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.Date;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -85,7 +87,7 @@ public class Bill implements Serializable {
      * 创建时间
      */
     @TableField("creationDate")
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 更新者（userId）
@@ -97,7 +99,7 @@ public class Bill implements Serializable {
      * 更新时间
      */
     @TableField("modifyDate")
-    private LocalDateTime modifyDate;
+    private Date modifyDate;
 
     /**
      * 供应商ID

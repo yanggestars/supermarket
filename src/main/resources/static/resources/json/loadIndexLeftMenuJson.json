@@ -39,7 +39,7 @@
       {
         "checkArr": "0",
         "children": [],
-        "href": "/bus/toSalesManager",
+        "href": "/bus/toBillManager",
         "icon": "&#xe65b;",
         "spread": false,
         "title": "订单管理"
