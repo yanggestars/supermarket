@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a937b92-d7fb-4482-a4ad-091785f9fba0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sup/common/DataGridView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sup/controller/BusinessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sup/vo/ProviderVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sup/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sup/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sup/controller/ProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sup/controller/ProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sup/entity/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sup/entity/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sup/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sup/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/json/loadIndexLeftMenuJson.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/json/loadIndexLeftMenuJson.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/json/newsList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/json/newsList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/layui_ext/dist/dtree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/layui_ext/dist/dtree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/business/provider/providerManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/business/provider/providerManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/index/deskManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/index/deskManager.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sup/controller/ProviderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sup/controller/ProviderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sup/entity/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sup/entity/Provider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sup/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sup/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/json/newsList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/resources/json/newsList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/layui_ext/dist/dtree.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/resources/layui_ext/dist/dtree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/business/provider/providerManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/business/provider/providerManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/index/deskManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/index/deskManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/index/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/system/index" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/sup" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,18 +89,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java-program\java_webplus\supermarket\src\main\java\com\sup" />
+      <recent name="D:\java-program\java_webplus\supermarket\src\main\resources\templates\system\index" />
       <recent name="D:\java-program\java_webplus\supermarket\src\main\resources\static\resources\json" />
+      <recent name="D:\java-program\java_webplus\supermarket\src\main\java\com\sup\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sup.common" />
       <recent name="com.sup.controller" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\java-program\java_webplus\supermarket\src\main\resources\templates\system\index" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\java-program\java_webplus\supermarket\src\main\resources\static\resources\json" />
-      <recent name="D:\java-program\java_webplus\supermarket\src\main\java\com\sup\entity" />
-      <recent name="D:\java-program\java_webplus\supermarket\src\main\java\com\sup" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SupApplication">
@@ -161,7 +181,7 @@
       <workItem from="1654312439948" duration="8859000" />
       <workItem from="1654391832047" duration="8755000" />
       <workItem from="1654412455864" duration="12029000" />
-      <workItem from="1654483918694" duration="603000" />
+      <workItem from="1654483918694" duration="8668000" />
     </task>
     <task id="LOCAL-00001" summary="auto save">
       <created>1654393217392</created>
@@ -184,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654438913001</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="auto save">
+      <created>1654484558086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654484558086</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,38 +248,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1654312188728" />
-    <state width="1492" height="183" key="GridCell.Tab.0.bottom" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.0.bottom" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
-    <state width="1492" height="183" key="GridCell.Tab.0.center" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
+    <state width="1492" height="525" key="GridCell.Tab.0.center" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
-    <state width="1492" height="183" key="GridCell.Tab.0.left" timestamp="1654484516756">
+    <state width="1492" height="525" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
+    <state width="1492" height="525" key="GridCell.Tab.0.left" timestamp="1654503197710">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1654484516756" />
-    <state width="1492" height="183" key="GridCell.Tab.0.right" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1654503197710" />
+    <state width="1492" height="525" key="GridCell.Tab.0.right" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
-    <state width="1492" height="183" key="GridCell.Tab.1.bottom" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
+    <state width="1492" height="525" key="GridCell.Tab.1.bottom" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
-    <state width="1492" height="183" key="GridCell.Tab.1.center" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
+    <state width="1492" height="525" key="GridCell.Tab.1.center" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
-    <state width="1492" height="183" key="GridCell.Tab.1.left" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
+    <state width="1492" height="525" key="GridCell.Tab.1.left" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
-    <state width="1492" height="183" key="GridCell.Tab.1.right" timestamp="1654484516757">
+    <state width="1492" height="525" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
+    <state width="1492" height="525" key="GridCell.Tab.1.right" timestamp="1654503197711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="183" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1654484516757" />
+    <state width="1492" height="525" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1654503197711" />
     <state width="1492" height="571" key="GridCell.Tab.2.bottom" timestamp="1654484152814">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -277,10 +304,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1654438922226" />
-    <state x="284" y="0" key="com.intellij.database.run.actions.ShowCsvFormatsAction" timestamp="1654418098723">
+    <state x="284" y="0" key="com.intellij.database.run.actions.ShowCsvFormatsAction" timestamp="1654496376660">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="284" y="0" key="com.intellij.database.run.actions.ShowCsvFormatsAction/0.0.1536.864@0.0.1536.864" timestamp="1654418098723" />
+    <state x="284" y="0" key="com.intellij.database.run.actions.ShowCsvFormatsAction/0.0.1536.864@0.0.1536.864" timestamp="1654496376660" />
     <state x="93" y="93" width="1350" height="678" key="dock-window-1" timestamp="1654411896653">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -293,10 +320,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" maximized="true" key="dock-window-3/0.0.1536.864@0.0.1536.864" timestamp="1654411886076" />
-    <state x="447" y="165" width="642" height="534" key="find.popup" timestamp="1654438846461">
+    <state x="447" y="165" width="642" height="534" key="find.popup" timestamp="1654497509558">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="447" y="165" width="642" height="534" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1654438846461" />
+    <state x="447" y="165" width="642" height="534" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1654497509558" />
     <state x="561" y="297" key="git4idea.rebase.GitRebaseDialog" timestamp="1654392757214">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -309,10 +336,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1654434879910" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1654433604258">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1654496381992">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1654433604258" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1654496381992" />
     <state x="457" y="353" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1654432884149">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

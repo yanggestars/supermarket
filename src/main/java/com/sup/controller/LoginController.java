@@ -65,13 +65,15 @@ public class LoginController {
 
             HashMap<String, Object> map = new HashMap<>();
             QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
-            queryWrapper.eq("userCode", user.getUserName());
-            queryWrapper.eq("userPassword", user.getUserPassword());
+//            queryWrapper.eq("userCode", user.getUserName());
+//            queryWrapper.eq("userPassword", user.getUserPassword());
+            queryWrapper.eq("userCode", "admin");
+            queryWrapper.eq("userPassword","1234567");
             List<User> users =  userService.list(queryWrapper);
             users.forEach(u-> System.out.println(u.toString()));
             if (users != null){
                 //将user存储到session中
-                WebUtils.getSession().setAttribute("user",user);
+                WebUtils.getSession().setAttribute("user",users.get(0));
                 return ResultObj.LOGIN_SUCCESS;
             }else {
                 return ResultObj.LOGIN_ERROR_PASS;

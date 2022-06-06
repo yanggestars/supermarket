@@ -27,20 +27,20 @@
         <div class="layui-inline">
             <label class="layui-form-label">供应商名称</label>
             <div class="layui-input-inline">
-                <input type="text" name="providername" id="providername" class="layui-input input-radius"
+                <input type="text" name="proName" id="proName" class="layui-input input-radius"
                        placeholder="请输入供应商名称">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">联系人名称</label>
             <div class="layui-input-inline">
-                <input type="text" name="connectionperson" id="connectionperson" class="layui-input input-radius" placeholder="请输入联系人名称">
+                <input type="text" name="proContact" id="proContact" class="layui-input input-radius" placeholder="请输入联系人名称">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">联系人号码</label>
             <div class="layui-input-inline">
-                <input type="text" name="phone" id="phone" class="layui-input input-radius" placeholder="请输入联系人号码">
+                <input type="text" name="proPhone" id="proPhone" class="layui-input input-radius" placeholder="请输入联系人号码">
             </div>
         </div>
     </div>
@@ -82,81 +82,60 @@
     <form action="" method="post" class="layui-form" id="dataFrm" lay-filter="dataFrm">
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">供应商名称</label>
+                <label class="layui-form-label">供应商编码</label>
                 <div class="layui-input-block">
                     <input type="hidden" name="id">
-                    <input type="text" name="providername" lay-verify="required" autocomplete="off"
-                           class="layui-input input-radius" placeholder="请输入供应商名称">
+                    <input type="text" name="proCode" lay-verify="required" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入供应商编码">
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">供应商地址</label>
+                <label class="layui-form-label">供应商名称</label>
                 <div class="layui-input-block">
-                    <input type="text" name="address" lay-verify="required" autocomplete="off" class="layui-input input-radius" placeholder="请输入供应商地址">
+                    <input type="text" name="proName" lay-verify="required" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入供应商名称">
                 </div>
             </div>
 
         </div>
         <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">供应商电话</label>
+            <div class="layui-form-item">
+                <label class="layui-form-label">供应商描述</label>
                 <div class="layui-input-block">
-                    <input type="text" name="telephone" lay-verify="required|number" autocomplete="off" class="layui-input input-radius" placeholder="请输入供应商电话">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">邮编</label>
-                <div class="layui-input-block">
-                    <input type="text" name="zip" lay-verify="required" autocomplete="off" class="layui-input input-radius" placeholder="请输入邮编">
+                    <input type="text" name="proDesc" lay-verify="required" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入供应商描述">
                 </div>
             </div>
         </div>
         <div class="layui-form-item">
-            <div class="layui-inline">
+            <div class="layui-form-item">
                 <label class="layui-form-label">联系人</label>
                 <div class="layui-input-block">
-                    <input type="text" name="connectionperson" lay-verify="required" autocomplete="off" class="layui-input input-radius" placeholder="请输入联系人姓名">
+                    <input type="text" name="proContact" lay-verify="required" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入联系人">
                 </div>
             </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">联系电话</label>
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系人电话</label>
                 <div class="layui-input-block">
-                    <input type="text" name="phone" lay-verify="required|number" autocomplete="off" class="layui-input input-radius" placeholder="请输入联系人电话">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">开户银行</label>
-                <div class="layui-input-block">
-                    <input type="text" id="bank" name="bank" lay-verify="required" autocomplete="off" class="layui-input input-radius" placeholder="请输入开户银行">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">银行账户</label>
-                <div class="layui-input-block">
-                    <input type="text" id="account" name="account" lay-verify="required|number" autocomplete="off" class="layui-input input-radius" placeholder="请输入开户银行">
+                    <input type="text" name="proPhone" lay-verify="required|number" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入联系人电话">
                 </div>
             </div>
         </div>
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">email</label>
+                <label class="layui-form-label">地址</label>
                 <div class="layui-input-block">
-                    <input type="text" id="email" name="email" lay-verify="required" autocomplete="off" class="layui-input input-radius" placeholder="请输入email">
+                    <input type="text" id="proAddress" name="proAddress" lay-verify="required" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入地址">
                 </div>
             </div>
             <div class="layui-inline">
                 <label class="layui-form-label">传真</label>
                 <div class="layui-input-block">
-                    <input type="text" id="fax" name="fax" lay-verify="required" autocomplete="off" class="layui-input input-radius" placeholder="请输入传真">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">是否可用</label>
-                <div class="layui-input-block">
-                    <input type="radio" name="available" value="1" title="可用" checked="">
-                    <input type="radio" name="available" value="0" title="不可用">
+                    <input type="text" id="proFax" name="proFax" lay-verify="required" autocomplete="off"
+                           class="layui-input input-radius" placeholder="请输入传真">
                 </div>
             </div>
         </div>
@@ -198,19 +177,13 @@
             cols: [ [
                 {type:'checkbox',fixed:'left'},
                 {field: 'id', title: 'ID', align: 'center',width:'50'},
-                {field: 'providername', title: '供应商名称', align: 'center',width:'100'},
-                {field: 'address', title: '供应商地址', align: 'center',width:'150'},
-                {field: 'telephone', title: '供应商电话', align: 'center',width:'140'},
-                {field: 'zip', title: '邮编', align: 'center',width:'90'},
-                {field: 'connectionperson', title: '联系人', align: 'center',width:'130'},
-                {field: 'phone', title: '联系人电话', align: 'center',width:'130'},
-                {field: 'bank', title: '开户银行', align: 'center',width:'100'},
-                {field: 'account', title: '银行账号', align: 'center',width:'160'},
-                {field: 'email', title: '邮箱', align: 'center',width:'200'},
-                {field: 'fax', title: '传真', align: 'center',width:'100'},
-                {field: 'available', title: '是否可用', align: 'center',width:'100',templet:function (d) {
-                    return d.available==1?'<font color="blue">可用</font>':'<font color="red">不可用</font>';
-                }},
+                {field: 'proCode', title: '供应商编码', align: 'center',width:'150'},
+                {field: 'proName', title: '供应商名称', align: 'center',width:'200'},
+                {field: 'proDesc', title: '供应商描述', align: 'center',width:'250'},
+                {field: 'proContact', title: '联系人', align: 'center',width:'90'},
+                {field: 'proPhone', title: '联系人电话', align: 'center',width:'130'},
+                {field: 'proAddress', title: '地址', align: 'center',width:'200'},
+                {field: 'proFax', title: '传真', align: 'center',width:'160'},
                 {fixed: 'right', title: '操作', toolbar: '#providerRowBar', align: 'center',width:'180'}
             ] ],
             done: function (data, curr, count) {
