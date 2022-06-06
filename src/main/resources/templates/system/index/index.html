@@ -115,11 +115,421 @@
 
 		//通过顶部菜单获取左侧二三级菜单   注：此处只做演示之用，实际开发中通过接口传参的方式获取导航数据
 		function getData(json){
-			$.getJSON(tab.tabConfig.url,function(data){
-					dataStr = data.data;
-					//重新渲染左侧菜单
-					tab.render();
-			})
+			// $.getJSON(tab.tabConfig.url,function(data){
+			// 		dataStr = data.data;
+			// 		//重新渲染左侧菜单
+			// 		tab.render();
+			// })
+			dataStr = [
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toGoodsManager",
+							"icon": "&#xe657;",
+							"id": 9,
+							"pid": 2,
+							"spread": false,
+							"title": "商品管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toGoodsTypeManager",
+							"icon": "&#xe657;",
+							"id": 126,
+							"pid": 2,
+							"spread": false,
+							"title": "分类管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/todelGoodsTypeManager",
+							"icon": "&#xe657;",
+							"id": 132,
+							"pid": 2,
+							"spread": false,
+							"title": "已删分类"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/todelGoodsManager",
+							"icon": "&#xe657;",
+							"id": 133,
+							"pid": 2,
+							"spread": false,
+							"title": "已删商品"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toGoodsyjManager",
+							"icon": "&#xe657;",
+							"id": 134,
+							"pid": 2,
+							"spread": false,
+							"title": "预警商品"
+						}
+					],
+					"href": "",
+					"icon": "&#xe857;",
+					"id": 2,
+					"pid": 1,
+					"spread": false,
+					"title": "商品管理"
+				},
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toInportManager",
+							"icon": "&#xe756;",
+							"id": 125,
+							"pid": 3,
+							"spread": false,
+							"title": "超市退货"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toProviderManager",
+							"icon": "&#xe658;",
+							"id": 201,
+							"pid": 3,
+							"spread": false,
+							"title": "供应商管理"
+						}
+					],
+					"href": "",
+					"icon": "&#xe857;",
+					"id": 3,
+					"pid": 1,
+					"spread": false,
+					"title": "进货管理"
+				},
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toInportManager",
+							"icon": "&#xe756;",
+							"id": 10,
+							"pid": 4,
+							"spread": true,
+							"title": "商品入库"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toOutportManager",
+							"icon": "&#xe65a;",
+							"id": 11,
+							"pid": 4,
+							"spread": true,
+							"title": "商品出库"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/deltoInportManager",
+							"icon": "&#xe657;",
+							"id": 139,
+							"pid": 4,
+							"spread": false,
+							"title": "已删入库"
+						}
+					],
+					"href": "",
+					"icon": "&#xe645;",
+					"id": 4,
+					"pid": 1,
+					"spread": false,
+					"title": "库存管理"
+				},
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toSalesManager",
+							"icon": "&#xe65b;",
+							"id": 12,
+							"pid": 5,
+							"spread": true,
+							"title": "销售订单"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toSalesbackManager",
+							"icon": "&#xe770;",
+							"id": 13,
+							"pid": 5,
+							"spread": false,
+							"title": "销售退货"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/deltoSalesManager",
+							"icon": "&#xe657;",
+							"id": 137,
+							"pid": 5,
+							"spread": true,
+							"title": "已删账单"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/deltoSalesbackManager",
+							"icon": "&#xe657;",
+							"id": 138,
+							"pid": 5,
+							"spread": false,
+							"title": "已删退货"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toCustomerManager",
+							"icon": "&#xe651;",
+							"id": 200,
+							"pid": 5,
+							"spread": false,
+							"title": "客户管理"
+						}
+					],
+					"href": "",
+					"icon": "&#xe611;",
+					"id": 5,
+					"pid": 1,
+					"spread": false,
+					"title": "销售管理"
+				},
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toSalManager",
+							"icon": "&#xe756;",
+							"id": 128,
+							"pid": 6,
+							"spread": true,
+							"title": "薪资管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toPayManager",
+							"icon": "&#xe756;",
+							"id": 129,
+							"pid": 6,
+							"spread": true,
+							"title": "进货支出"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/todesk",
+							"icon": "&#xe756;",
+							"id": 131,
+							"pid": 6,
+							"spread": true,
+							"title": "财务分析"
+						}
+					],
+					"href": "",
+					"icon": "&#xe628;",
+					"id": 6,
+					"pid": 1,
+					"spread": false,
+					"title": "财务管理"
+				},
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toDeptManager",
+							"icon": "&#xe770;",
+							"id": 14,
+							"pid": 7,
+							"spread": false,
+							"title": "部门管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toUserManager",
+							"icon": "&#xe612;",
+							"id": 18,
+							"pid": 7,
+							"spread": false,
+							"title": "用户管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toLeaveManager",
+							"icon": "&#xe857;",
+							"id": 122,
+							"pid": 7,
+							"spread": false,
+							"title": "请假管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toUserLeave",
+							"icon": "&#xe857;",
+							"id": 123,
+							"pid": 7,
+							"spread": false,
+							"title": "个人请假"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toKaoqinManager",
+							"icon": "&#xe756;",
+							"id": 130,
+							"pid": 7,
+							"spread": true,
+							"title": "考勤管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/todelDeptManager",
+							"icon": "&#xe657;",
+							"id": 135,
+							"pid": 7,
+							"spread": false,
+							"title": "已删部门"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/deltoUserManager",
+							"icon": "&#xe657;",
+							"id": 136,
+							"pid": 7,
+							"spread": false,
+							"title": "已删用户"
+						}
+					],
+					"href": "",
+					"icon": "&#xe628;",
+					"id": 7,
+					"pid": 1,
+					"spread": false,
+					"title": "人事管理"
+				},
+				{
+					"checkArr": "0",
+					"children": [
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toMenuManager",
+							"icon": "&#xe857;",
+							"id": 15,
+							"pid": 8,
+							"spread": false,
+							"title": "菜单管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toPermissionManager",
+							"icon": "&#xe857;",
+							"id": 16,
+							"pid": 8,
+							"spread": false,
+							"title": "权限管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toRoleManager",
+							"icon": "&#xe650;",
+							"id": 17,
+							"pid": 8,
+							"spread": false,
+							"title": "角色管理"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/sys/toLoginfoManager",
+							"icon": "&#xe675;",
+							"id": 21,
+							"pid": 8,
+							"spread": false,
+							"title": "登陆日志"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toControllerTrace",
+							"icon": "&#xe857;",
+							"id": 203,
+							"pid": 8,
+							"spread": true,
+							"title": "方法痕迹"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toRecordTrace",
+							"icon": "&#xe857;",
+							"id": 204,
+							"pid": 8,
+							"spread": true,
+							"title": "键鼠痕迹"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toKeyRadius",
+							"icon": "&#xe670;",
+							"id": 205,
+							"pid": 8,
+							"spread": true,
+							"title": "键盘饼图"
+						},
+						{
+							"checkArr": "0",
+							"children": [],
+							"href": "/bus/toMouseRadius",
+							"icon": "&#xe756;",
+							"id": 206,
+							"pid": 8,
+							"spread": true,
+							"title": "鼠标饼图"
+						}
+					],
+					"href": "",
+					"icon": "&#xe614;",
+					"id": 8,
+					"pid": 1,
+					"spread": false,
+					"title": "系统管理"
+				}
+			]
+			tab.render();
 		}
 		//页面加载时判断左侧菜单是否显示
 		//通过顶部菜单获取左侧菜单
