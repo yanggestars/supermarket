@@ -83,17 +83,6 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
 		$(this).parent("li").siblings().removeClass("layui-nav-itemed");
 	})
 
-	//清除缓存
-	$(".clearCache").click(function(){
-		window.sessionStorage.clear();
-        window.localStorage.clear();
-        var index = layer.msg('清除缓存中，请稍候',{icon: 16,time:false,shade:0.8});
-        setTimeout(function(){
-            layer.close(index);
-            layer.msg("缓存清除成功！");
-        },1000);
-    })
-
 	//刷新后还原打开的窗口
     if(cacheStr == "true") {
         if (window.sessionStorage.getItem("menu") != null) {

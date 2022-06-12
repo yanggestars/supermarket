@@ -121,6 +121,21 @@ public class ProviderController {
         }
     }
 
+    /**
+     * 查询所有的供应商
+     * @param providerVo
+     * @return
+     */
+    @RequestMapping("loadAllProviderForSelect")
+    public DataGridView loadAllProviderForSelect(ProviderVo providerVo){
+        //1.声明一个分页page对象
+        IPage<Provider> page = new Page(providerVo.getPage(),providerVo.getLimit());
+        //2.声明一个queryWrapper
+        QueryWrapper<Provider> queryWrapper = new QueryWrapper();
+        providerService.page(page,queryWrapper);
+        return new DataGridView(page.getTotal(),page.getRecords());
+    }
+
 
 
 }

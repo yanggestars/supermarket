@@ -40,4 +40,14 @@ public class BusinessController {
         return "business/bill/billManager";
     }
 
+    /**
+     * 跳转到商品账单管理页面
+     * @return
+     */
+    @RequestMapping("toMailManager")
+    public String toMailManager(){
+        return "business/mail/mailManager";
+    }
+
+
 }

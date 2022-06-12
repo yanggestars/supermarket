@@ -60,6 +60,14 @@
         "icon": "&#xe612;",
         "spread": false,
         "title": "用户管理"
+      },
+      {
+        "checkArr": "0",
+        "children": [],
+        "href": "/bus/toMailManager",
+        "icon": "&#xe857;",
+        "spread": false,
+        "title": "发送邮件"
       }
     ],
     "href": "",

@@ -24,9 +24,6 @@
 				<a href="javascript:;" class="seraph hideMenu icon-caidan"></a>
 			    <!-- 顶部右侧菜单 -->
 			    <ul class="layui-nav top_menu">
-					<li class="layui-nav-item" pc>
-						<a href="javascript:;" class="clearCache"><i class="layui-icon" data-icon="&#xe640;">&#xe640;</i><cite>清除缓存</cite><span class="layui-badge-dot"></span></a>
-					</li>
 					<li class="layui-nav-item lockcms" pc>
 						<a href="javascript:;"><i class="seraph icon-lock"></i><cite>锁屏</cite></a>
 					</li>
@@ -89,7 +86,7 @@
 		</div>
 		<!-- 底部 -->
 		<div class="layui-footer footer">
-			<p><span>copyright @2019 WHSXT</span></p>
+			<p><span>copyright @2022</span></p>
 		</div>
 	</div>
 
@@ -172,16 +169,6 @@
 			$(this).parent("li").siblings().removeClass("layui-nav-itemed");
 		})
 
-		//清除缓存
-		$(".clearCache").click(function(){
-			window.sessionStorage.clear();
-	        window.localStorage.clear();
-	        var index = layer.msg('清除缓存中，请稍候',{icon: 16,time:false,shade:0.8});
-	        setTimeout(function(){
-	            layer.close(index);
-	            layer.msg("缓存清除成功！");
-	        },1000);
-	    })
 
 		//刷新后还原打开的窗口
 	    if(cacheStr == "true") {

@@ -55,30 +55,10 @@
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">分类</label>
-            <div class="layui-input-inline">
-                <select name="typeid" id="select_typeid">
-                    <option value="1">请选择分类</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-inline">
             <label class="layui-form-label">商品名称</label>
             <div class="layui-input-inline">
                 <input type="text" name="goodsname" id="goodsname" class="layui-input input-radius"
                        placeholder="请输入商品名称">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">生产批号</label>
-            <div class="layui-input-inline">
-                <input type="text" name="productcode" id="productcode" class="layui-input input-radius" placeholder="请输入生产批号">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">批准文号</label>
-            <div class="layui-input-inline">
-                <input type="text" name="promitcode" id="promitcode" class="layui-input input-radius" placeholder="请输入批准文号">
             </div>
         </div>
     </div>
@@ -112,15 +92,15 @@
 <div>
     <table class="layui-hide" id="goodsTable" lay-filter="goodsTable"></table>
     <div id="goodsToolBar" style="display: none">
-        <button type="button" lay-event="add" shiro:hasPermission="goods:create" class="layui-btn layui-btn-sm layui-btn-normal layui-btn-radius">
+        <button type="button" lay-event="add" class="layui-btn layui-btn-sm layui-btn-normal layui-btn-radius">
             <i class="layui-icon layui-icon-add-1"></i>添加商品
         </button>
     </div>
     <div id="goodsRowBar" style="display: none;">
-        <button type="button" lay-event="update" shiro:hasPermission="goods:update" class="layui-btn layui-btn-sm layui-btn-radius"><i
+        <button type="button" lay-event="update" class="layui-btn layui-btn-sm layui-btn-radius"><i
                 class="layui-icon layui-icon-edit"></i>编辑
         </button>
-        <button type="button" lay-event="delete" shiro:hasPermission="goods:delete" class="layui-btn layui-btn-sm layui-btn-danger layui-btn-radius"><i
+        <button type="button" lay-event="delete" class="layui-btn layui-btn-sm layui-btn-danger layui-btn-radius"><i
                 class="layui-icon layui-icon-delete"></i>删除
         </button>
     </div>
@@ -140,14 +120,6 @@
                             </select>
                         </div>
                     </div>
-                    <div class="layui-form-item magt3">
-                        <label class="layui-form-label">商品分类</label>
-                        <div class="layui-input-block">
-                            <select name="typeid" id="typeid">
-                                <option value="1">请选择分类</option>
-                            </select>
-                        </div>
-                    </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">商品名称</label>
                         <div class="layui-input-block">
@@ -160,12 +132,6 @@
                         <div class="layui-input-block">
                             <input type="text" class="layui-input input-radius" name="description" lay-verify="required" placeholder="请输入商品描述">
                         </div>
-                    </div>
-                </div>
-                <div class="layui-col-md3 layui-col-xs5">
-                    <div class="layui-upload-list thumbBox mag0 magt3">
-                        <input type="hidden" name="goodsimg" id="goodsimg" value="images/noDefaultImage.jpg">
-                        <img class="layui-upload-img thumbImg" src="/file/showImageByPath?path=images/noDefaultImage.jpg">
                     </div>
                 </div>
             </div>
@@ -195,12 +161,6 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <label class="layui-form-label">批准文号</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input input-radius" name="promitcode" lay-verify="required" placeholder="请输入商品批准文号">
-                    </div>
-                </div>
-                <div class="layui-inline">
                     <label class="layui-form-label">销售价格</label>
                     <div class="layui-input-inline">
                         <input type="text" class="layui-input input-radius" name="price" lay-verify="required|number" placeholder="请输入商品销售价格">
@@ -210,19 +170,6 @@
                     <label class="layui-form-label">库存量</label>
                     <div class="layui-input-inline">
                         <input type="text" class="layui-input input-radius" name="number" lay-verify="required|number" placeholder="请输入商品库存量">
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <label class="layui-form-label">预警值</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input input-radius" name="dangernum" lay-verify="required|number" placeholder="请输入商品预警值">
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <label class="layui-form-label">是否可用</label>
-                    <div class="layui-input-inline">
-                        <input type="radio" name="available" value="1" title="可用" checked="">
-                        <input type="radio" name="available" value="0" title="不可用" >
                     </div>
                 </div>
             </div>
@@ -264,25 +211,15 @@
             cols: [ [
                 {field: 'id', title: 'ID', align: 'center',width:'50'},
                 {field: 'goodsname', title: '商品名称', align: 'center',width:'150'},
-                {field: 'providername', title: '供应商', align: 'center',width:'150'},
-                {field: 'type', title: '商品分类', align: 'center',width:'150'},
                 {field: 'produceplace', title: '商品产地', align: 'center',width:'150'},
-                {field: 'description', title: '商品描述', align: 'center',width:'150'},
-                {field: 'price', title: '销售价格', align: 'center',width:'90'},
-                {field: 'number', title: '数量', align: 'center',width:'90',templet:function (d) {
-                        return d.dangernum>d.number?'<font color="red">'+d.number+'</font>':'<font color="black">'+d.number+'</font>';
-                    }},
-                {field: 'dangernum', title: '库存预警值', align: 'center',width:'100'},
-                {field: 'goodsimg', title: '商品图片', align: 'center',width:'150', templet:function(d){
-                    return '<img width=40 height=40 src=/resources/images/'+d.goodsimg+ ' />';
-                }},
                 {field: 'size', title: '规格', align: 'center',width:'120'},
                 {field: 'goodspackage', title: '包装', align: 'center',width:'120'},
                 {field: 'productcode', title: '生产批号', align: 'center',width:'130'},
-                {field: 'promitcode', title: '批准文号', align: 'center',width:'130'},
-                {field: 'available', title: '是否可用', align: 'center',width:'100',templet:function (d) {
-                    return d.available==1?'<font color="blue">可用</font>':'<font color="red">不可用</font>';
-                }},
+                {field: 'description', title: '商品描述', align: 'center',width:'150'},
+                {field: 'price', title: '销售价格', align: 'center',width:'90'},
+                {field: 'number', title: '商品数量', align: 'center',width:'90'},
+                {field: 'providername', title: '供应商名称', align: 'center',width:'120'},
+                {field: 'providerid', title: '供应商id', align: 'center',width:'90'},
                 {fixed: 'right', title: '操作', toolbar: '#goodsRowBar', align: 'center',width:'180'}
             ] ],
             done: function (data, curr, count) {
@@ -304,19 +241,7 @@
             var dom = $("#select_providerid");
             var html = '<option value="0">请选择供应商</option>';
             $.each(data,function (index, item) {
-                html += '<option value="'+item.id+'">'+item.providername+'</option>';
-            })
-            dom.html(html);
-            //重新渲染下拉列表
-            form.render("select");
-        });
-        //初始化查询条件的下拉列表
-        $.get("/type/loadAllTypeForSelect",function (res) {
-            var data = res.data;
-            var dom = $("#select_typeid");
-            var html = '<option value="1">请选分类</option>';
-            $.each(data,function (index, item) {
-                html += '<option value="'+item.id+'">'+item.type+'</option>';
+                html += '<option value="'+item.id+'">'+item.proName+'</option>';
             })
             dom.html(html);
             //重新渲染下拉列表
@@ -359,21 +284,7 @@
             };
         });
 
-        //文件上传
-        upload.render({
-            elem: '.thumbBox',
-            url: '/file/uploadFile',
-            acceptMime:'image/*',
-            field:'mf',
-            method : "post",
-            done: function(res, index, upload){
-                var path=res.path;
-                $('.thumbImg').attr('src',''+path);
-                $('.thumbBox').css("background","#fff");
-                //给隐藏域赋值
-                $("#goodsimg").val(path);
-            }
-        });
+
 
         var mainIndex;
         var url;
@@ -391,27 +302,13 @@
                     $.get("/provider/loadAllProviderForSelect",function(res){
                         var data=res.data;
                         var dom=$("#providerid");
-                        var html='<option value="0">请选择供应商</option>'
+                        var html='<option value="0">请选择供应商</option>';
                         $.each(data,function(index,item){
-                            html+='<option value="'+item.id+'">'+item.providername+'</option>'
+                            html+='<option value="'+item.id+'">'+item.proName+'</option>'
                         });
                         dom.html(html);
                         form.render("select");
                     });
-                    $.get("/type/loadAllTypeForSelect",function (res) {
-                        var data = res.data;
-                        var dom = $("#typeid");
-                        var html = '<option value="1">请选择分类</option>';
-                        $.each(data,function (index, item) {
-                            html += '<option value="'+item.id+'">'+item.type+'</option>';
-                        })
-                        dom.html(html);
-                        //重新渲染下拉列表
-                        form.render("select");
-                    });
-                    //设置默认为无图片
-                    $(".thumbImg").attr("src",'/file/showImageByPath?path=images/noDefaultImage.jpg');
-                    $("#goodsimg").val('/resources/images/noDefaultImage.jpg');
                 }
             });
         }
@@ -434,26 +331,12 @@
                     $.get("/provider/loadAllProviderForSelect",function(res){
                         var redata=res.data;
                         var dom=$("#providerid");
-                        var html='<option value="0">请选择供应商</option>'
+                        var html='<option value="0">请选择供应商</option>';
                         $.each(redata,function(index,item){
                             if (data.providerid===item.id){
-                                html+='<option value="'+item.id+'" selected>'+item.providername+'</option>'
+                                html+='<option value="'+item.id+'" selected>'+item.proName+'</option>'
                             }else {
-                                html+='<option value="'+item.id+'">'+item.providername+'</option>'
-                            }
-                        });
-                        dom.html(html);
-                        form.render("select");
-                    });
-                    $.get("/type/loadAllTypeForSelect",function(res){
-                        var redata=res.data;
-                        var dom=$("#typeid");
-                        var html='<option value="1">请选择分类</option>'
-                        $.each(redata,function(index,item){
-                            if (data.typeid===item.id){
-                                html+='<option value="'+item.id+'" selected>'+item.type+'</option>'
-                            }else {
-                                html+='<option value="'+item.id+'">'+item.type+'</option>'
+                                html+='<option value="'+item.id+'">'+item.proName+'</option>'
                             }
                         });
                         dom.html(html);
