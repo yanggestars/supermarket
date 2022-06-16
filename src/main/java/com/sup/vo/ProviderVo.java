@@ -4,10 +4,7 @@ import com.sup.entity.Provider;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/**
- * @Author: admin-
- * @Date: 2021/10/13 9:30
- */
+
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class ProviderVo extends Provider{

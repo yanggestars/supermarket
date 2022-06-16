@@ -26,11 +26,8 @@ public class Address implements Serializable {
 
     private static final long serialVersionUID=1L;
 
-    /**
-     * 主键ID
-     */
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     /**
      * 联系人姓名

@@ -20,9 +20,9 @@ spring:
         url-pattern: /druid/*
 
   mail:
-    host: smtp.126.com #发送邮件服务器
-    username: xxx@126.com #网易邮箱
-    password: 123456 #客户端授权码
+    host: smtp.163.com #发送邮件服务器
+    username: pty155290@163.com #网易邮箱
+    password: EJDRFPYUBYPOEGMP #客户端授权码
     protocol: smtp #发送邮件协议
     properties.mail.smtp.auth: true
     properties.mail.smtp.port: 465
@@ -30,7 +30,7 @@ spring:
     properties.mail.smtp.starttls.required: true
     properties.mail.smtp.ssl.enable: true #开启SSL
     default-encoding: utf-8
-    from: xx@126.com
+    from: pty155290@163.com
 
   servlet:
       multipart:
@@ -58,20 +58,20 @@ mybatis-plus:
 mvc:
   static-path-pattern: /**
 
-##shiro的配置
-#shiro:
-#  hash-algorithm-name: md5
-#  hash-iterations: 2
-#  anon-urls:
-#  - /index.html*
-#  - /sys/toLogin*
-#  - /login/login*
-#  - /login/getCode
-#  - /resources/**
-#  login-url: /index.html
-#  log-out-url: /login/logout*
-#  authc-ulrs:
-#  - /**
+#shiro的配置
+shiro:
+  hash-algorithm-name: md5
+  hash-iterations: 2
+  anon-urls:
+  - /index.html*
+  - /sys/toLogin*
+  - /login/login*
+  - /login/getCode
+  - /resources/**
+  login-url: /index.html
+  log-out-url: /login/logout*
+  authc-ulrs:
+  - /**
 
 #修改端口号为8080
 server:

@@ -1,15 +1,19 @@
 package com.sup.vo;
 
-import com.sup.entity.Goods;
+import com.sup.entity.User;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class GoodsVo extends Goods {
+public class UserVo extends User {
 
     private Integer page=1;
     private Integer limit=10;
 
+    /**
+     * 验证码
+     */
+    private String code;
 }

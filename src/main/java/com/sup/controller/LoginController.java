@@ -42,46 +42,46 @@ public class LoginController {
 
         //获得存储在session中的验证码
         String sessionCode = (String) session.getAttribute("code");
-//        if (code!=null&&sessionCode.equals(code)){
-//            Subject subject = SecurityUtils.getSubject();
-//            AuthenticationToken token = new UsernamePasswordToken(user.getUserName(),user.getUserPassword());
-//            try {
-//                //对用户进行认证登陆
-//                subject.login(token);
-//                //通过subject获取以认证活动的user
-//                ActiverUser activerUser = (ActiverUser) subject.getPrincipal();
-//                //将user存储到session中
-//                WebUtils.getSession().setAttribute("user",activerUser.getUser());
-//
-//                return ResultObj.LOGIN_SUCCESS;
-//            } catch (AuthenticationException e) {
-//                e.printStackTrace();
-//                return ResultObj.LOGIN_ERROR_PASS;
-//            }
-//        }else {
-//            return ResultObj.LOGIN_ERROR_CODE;
-//        }
         if (code!=null&&sessionCode.equals(code)){
-
-            HashMap<String, Object> map = new HashMap<>();
-            QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
-//            queryWrapper.eq("userCode", user.getUserName());
-//            queryWrapper.eq("userPassword", user.getUserPassword());
-            queryWrapper.eq("userCode", "admin");
-            queryWrapper.eq("userPassword","1234567");
-            List<User> users =  userService.list(queryWrapper);
-            users.forEach(u-> System.out.println(u.toString()));
-            if (users != null){
+            Subject subject = SecurityUtils.getSubject();
+            AuthenticationToken token = new UsernamePasswordToken(user.getLoginName(),user.getUserPassword());
+            try {
+                //对用户进行认证登陆
+                subject.login(token);
+                //通过subject获取以认证活动的user
+                ActiverUser activerUser = (ActiverUser) subject.getPrincipal();
                 //将user存储到session中
-                WebUtils.getSession().setAttribute("user",users.get(0));
+                WebUtils.getSession().setAttribute("user",activerUser.getUser());
+
                 return ResultObj.LOGIN_SUCCESS;
-            }else {
+            } catch (AuthenticationException e) {
+                e.printStackTrace();
                 return ResultObj.LOGIN_ERROR_PASS;
             }
-
         }else {
             return ResultObj.LOGIN_ERROR_CODE;
         }
+//        if (code!=null&&sessionCode.equals(code)){
+//
+//            HashMap<String, Object> map = new HashMap<>();
+//            QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+////            queryWrapper.eq("userCode", user.getUserName());
+////            queryWrapper.eq("userPassword", user.getUserPassword());
+//            queryWrapper.eq("userCode", "admin");
+//            queryWrapper.eq("userPassword","1234567");
+//            List<User> users =  userService.list(queryWrapper);
+//            users.forEach(u-> System.out.println(u.toString()));
+//            if (users != null){
+//                //将user存储到session中
+//                WebUtils.getSession().setAttribute("user",users.get(0));
+//                return ResultObj.LOGIN_SUCCESS;
+//            }else {
+//                return ResultObj.LOGIN_ERROR_PASS;
+//            }
+//
+//        }else {
+//            return ResultObj.LOGIN_ERROR_CODE;
+//        }
 
     }
 

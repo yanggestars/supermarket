@@ -26,21 +26,10 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("smbms_user")
 public class User implements Serializable {
-
     private static final long serialVersionUID=1L;
 
-    /**
-     * 主键ID
-     */
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
-
-    /**
-     * 用户编码
-     */
-    @TableField("userCode")
-    private String userCode;
-
+    private Integer id;
     /**
      * 用户名称
      */
@@ -56,57 +45,32 @@ public class User implements Serializable {
     /**
      * 性别（1:女、 2:男）
      */
-    private Integer gender;
+    @TableField("sex")
+    private Integer sex;
 
     /**
-     * 出生日期
+     * 盐
      */
-    private Date birthday;
-
-    /**
-     * 手机
-     */
-    private String phone;
+    @TableField("salt")
+    private String salt;
 
     /**
      * 地址
      */
+    @TableField("address")
     private String address;
 
     /**
-     * 用户角色（取自角色表-角色id）
+     * 登录用户名
      */
-    @TableField("userRole")
-    private Integer userRole;
+    @TableField("loginName")
+    private String loginName;
 
     /**
-     * 创建者（userId）
+     * 邮件
      */
-    @TableField("createdBy")
-    private Long createdBy;
+    @TableField("mail")
+    private String mail;
 
-    /**
-     * 创建时间
-     */
-    @TableField("creationDate")
-    private Date creationDate;
-
-    /**
-     * 更新者（userId）
-     */
-    @TableField("modifyBy")
-    private Long modifyBy;
-
-    /**
-     * 更新时间
-     */
-    @TableField("modifyDate")
-    private Date modifyDate;
-
-    /**
-     * 头像照片地址
-     */
-    @TableField("imgpath")
-    private String imgpath;
 
 }

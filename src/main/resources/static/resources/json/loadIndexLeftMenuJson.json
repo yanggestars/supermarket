@@ -60,44 +60,11 @@
         "icon": "&#xe612;",
         "spread": false,
         "title": "用户管理"
-      },
-      {
-        "checkArr": "0",
-        "children": [],
-        "href": "/bus/toMailManager",
-        "icon": "&#xe857;",
-        "spread": false,
-        "title": "发送邮件"
       }
     ],
     "href": "",
     "icon": "&#xe628;",
     "spread": false,
     "title": "用户管理"
-  },
-  {
-    "checkArr": "0",
-    "children": [
-      {
-        "checkArr": "0",
-        "children": [],
-        "href": "/sys/toPermissionManager",
-        "icon": "&#xe857;",
-        "spread": false,
-        "title": "权限管理"
-      },
-      {
-        "checkArr": "0",
-        "children": [],
-        "href": "/sys/toRoleManager",
-        "icon": "&#xe650;",
-        "spread": false,
-        "title": "角色管理"
-      }
-    ],
-    "href": "",
-    "icon": "&#xe614;",
-    "spread": false,
-    "title": "系统管理"
   }
 ]

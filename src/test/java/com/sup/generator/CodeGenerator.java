@@ -62,8 +62,9 @@ public class CodeGenerator {
 //        strategy.setSuperEntityColumns("id");
 
         //设置要生成哪些表  如果不设置就是生成所有的表
-        strategy.setInclude("smbms_goods");
+        //strategy.setInclude("smbms_goods");
         //strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
+        strategy.setInclude("smbms_permission,smbms_role,smbms_role_permission,smbms_user,smbms_user_role".split(","));
         strategy.setControllerMappingHyphenStyle(true);
 
         strategy.setTablePrefix(pc.getModuleName() + "_");

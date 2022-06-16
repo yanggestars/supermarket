@@ -166,13 +166,6 @@ public class SystemController {
     public String deltoUserManager(){
         return "system/user/deluserManager";
     }
-    /**
-     * 跳转到缓存管理
-     * @return
-     */
-    @RequestMapping("toCacheManager")
-    public String toCacheManager(){
-        return "system/cache/cacheManager";
-    }
+
 
 }

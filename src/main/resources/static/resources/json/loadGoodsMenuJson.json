@@ -1,0 +1,19 @@
+[
+  {
+    "checkArr": "0",
+    "children": [
+      {
+        "checkArr": "0",
+        "children": [],
+        "href": "/bus/toGoodsManager",
+        "icon": "&#xe657;",
+        "spread": false,
+        "title": "商品管理"
+      }
+    ],
+    "href": "",
+    "icon": "&#xe857;",
+    "spread": false,
+    "title": "商品管理"
+  }
+]

@@ -165,7 +165,7 @@
 			<version>${fastjson.version}</version>
 		</dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>
